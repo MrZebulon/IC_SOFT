@@ -3,4 +3,5 @@
 /Simulator/DynamicModel/output/
 /Simulator/Sensor/output/
 /Orchestrator/output/
+/.idea
 /Doxyfile
