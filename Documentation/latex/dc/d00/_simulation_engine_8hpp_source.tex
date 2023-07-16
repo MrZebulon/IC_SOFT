@@ -1,0 +1,30 @@
+\doxysection{Simulation\+Engine.\+hpp}
+\hypertarget{_simulation_engine_8hpp_source}{}\label{_simulation_engine_8hpp_source}\index{Simulator/DynamicSimulation/include/engine/SimulationEngine.hpp@{Simulator/DynamicSimulation/include/engine/SimulationEngine.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ Samuel\ on\ 16/06/2023.}}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ IC\_SOFT\_SIMULATIONENGINE\_HPP}}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ IC\_SOFT\_SIMULATIONENGINE\_HPP}}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <Eigen/Dense>}}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}SimulationEngineInterface.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}EnginePlant.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00013}00013\ \textcolor{keyword}{namespace\ }icarus::simulator::engine\ \{}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00014}00014\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ DynamicsModel>}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00015}\mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_simulation_engine}{00015}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_simulation_engine}{SimulationEngine}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_interface}{SimulationEngineInterface}},\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{structicarus_1_1simulator_1_1engine_1_1_simulation_engine_parameters}{SimulationEngineParameters}}\ \{}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structicarus_1_1_state}{State}}\ single\_step(\textcolor{keyword}{const}\ \mbox{\hyperlink{structicarus_1_1_state}{State}}\&\ state,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structicarus_1_1_control}{Control}}\&\ control,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structicarus_1_1_environment}{Environment}}\&\ env,\ \textcolor{keywordtype}{double}\ dt)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_engine_plant}{EnginePlant<DynamicsModel>}}\ plant;}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00022}00022\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{_simulation_engine_8hpp_source_l00024}00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//IC\_SOFT\_SIMULATIONENGINE\_HPP}}
+
+\end{DoxyCode}

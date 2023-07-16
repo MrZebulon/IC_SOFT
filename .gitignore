@@ -1,6 +1,6 @@
 /cmake-build-debug/
 /common/output/
-/Simulator/DynamicModel/output/
+/Simulator/DynamicSimulation/output/
 /Simulator/Sensor/output/
 /Orchestrator/output/
 /.idea

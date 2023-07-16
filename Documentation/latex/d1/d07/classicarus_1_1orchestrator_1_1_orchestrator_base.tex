@@ -1,0 +1,105 @@
+\doxysection{icarus\+::orchestrator\+::Orchestrator\+Base Class Reference}
+\hypertarget{classicarus_1_1orchestrator_1_1_orchestrator_base}{}\label{classicarus_1_1orchestrator_1_1_orchestrator_base}\index{icarus::orchestrator::OrchestratorBase@{icarus::orchestrator::OrchestratorBase}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classicarus_1_1orchestrator_1_1_orchestrator_base_a99b7b5b25fcb3280d487ba071e7c2fe7}{run}} ()
+\item 
+virtual void \mbox{\hyperlink{classicarus_1_1orchestrator_1_1_orchestrator_base_ab64e445c6fd67045c4b8aee05e1dd49d}{run\+\_\+once}} ()
+\item 
+void \mbox{\hyperlink{classicarus_1_1orchestrator_1_1_orchestrator_base_a9176e25da8d8318f0808924570191488}{set\+\_\+operation\+\_\+mode}} (Orchestrator\+Mode op\+\_\+mode)
+\item 
+Orchestrator\+Mode \mbox{\hyperlink{classicarus_1_1orchestrator_1_1_orchestrator_base_a5debe5f947266c786f98ef626517a4ef}{get\+\_\+operation\+\_\+mode}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Orchestrator\+Mode \mbox{\hyperlink{classicarus_1_1orchestrator_1_1_orchestrator_base_a5f3aa2a9497f49c4dee8215e7eb748d5}{\+\_\+op\+\_\+mode}} = IDLE
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_orchestrator_base_8hpp_source_l00014}{14}} of file \mbox{\hyperlink{_orchestrator_base_8hpp_source}{Orchestrator\+Base.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classicarus_1_1orchestrator_1_1_orchestrator_base_a5debe5f947266c786f98ef626517a4ef}\label{classicarus_1_1orchestrator_1_1_orchestrator_base_a5debe5f947266c786f98ef626517a4ef} 
+\index{icarus::orchestrator::OrchestratorBase@{icarus::orchestrator::OrchestratorBase}!get\_operation\_mode@{get\_operation\_mode}}
+\index{get\_operation\_mode@{get\_operation\_mode}!icarus::orchestrator::OrchestratorBase@{icarus::orchestrator::OrchestratorBase}}
+\doxysubsubsection{\texorpdfstring{get\_operation\_mode()}{get\_operation\_mode()}}
+{\footnotesize\ttfamily Orchestrator\+Mode icarus\+::orchestrator\+::\+Orchestrator\+Base\+::get\+\_\+operation\+\_\+mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orchestrator_base_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{_orchestrator_base_8hpp_source}{Orchestrator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1orchestrator_1_1_orchestrator_base_a99b7b5b25fcb3280d487ba071e7c2fe7}\label{classicarus_1_1orchestrator_1_1_orchestrator_base_a99b7b5b25fcb3280d487ba071e7c2fe7} 
+\index{icarus::orchestrator::OrchestratorBase@{icarus::orchestrator::OrchestratorBase}!run@{run}}
+\index{run@{run}!icarus::orchestrator::OrchestratorBase@{icarus::orchestrator::OrchestratorBase}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Orchestrator\+Base\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+RUN ENDPOINT~\newline
+ Calls run\+\_\+once if orchestrator is not IDLE
+
+Definition at line \mbox{\hyperlink{_orchestrator_base_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_orchestrator_base_8cpp_source}{Orchestrator\+Base.\+cpp}}.
+
+\Hypertarget{classicarus_1_1orchestrator_1_1_orchestrator_base_ab64e445c6fd67045c4b8aee05e1dd49d}\label{classicarus_1_1orchestrator_1_1_orchestrator_base_ab64e445c6fd67045c4b8aee05e1dd49d} 
+\index{icarus::orchestrator::OrchestratorBase@{icarus::orchestrator::OrchestratorBase}!run\_once@{run\_once}}
+\index{run\_once@{run\_once}!icarus::orchestrator::OrchestratorBase@{icarus::orchestrator::OrchestratorBase}}
+\doxysubsubsection{\texorpdfstring{run\_once()}{run\_once()}}
+{\footnotesize\ttfamily virtual void icarus\+::orchestrator\+::\+Orchestrator\+Base\+::run\+\_\+once (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+SINGLE CYCLE OF EXECUTION LOOP~\newline
+
+\begin{DoxyEnumerate}
+\item Broadcast op\+\_\+mode~\newline
+
+\item Compute/\+Fetch sensor data~\newline
+
+\item Fetch Targets~\newline
+
+\item Fetch \doxylink{structicarus_1_1_state}{State}~\newline
+
+\item Compute commands~\newline
+
+\item Move (wait for feedback)~\newline
+
+\item Render~\newline
+ 
+\end{DoxyEnumerate}
+
+Definition at line \mbox{\hyperlink{_orchestrator_base_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_orchestrator_base_8hpp_source}{Orchestrator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1orchestrator_1_1_orchestrator_base_a9176e25da8d8318f0808924570191488}\label{classicarus_1_1orchestrator_1_1_orchestrator_base_a9176e25da8d8318f0808924570191488} 
+\index{icarus::orchestrator::OrchestratorBase@{icarus::orchestrator::OrchestratorBase}!set\_operation\_mode@{set\_operation\_mode}}
+\index{set\_operation\_mode@{set\_operation\_mode}!icarus::orchestrator::OrchestratorBase@{icarus::orchestrator::OrchestratorBase}}
+\doxysubsubsection{\texorpdfstring{set\_operation\_mode()}{set\_operation\_mode()}}
+{\footnotesize\ttfamily void icarus\+::orchestrator\+::\+Orchestrator\+Base\+::set\+\_\+operation\+\_\+mode (\begin{DoxyParamCaption}\item[{Orchestrator\+Mode}]{op\+\_\+mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orchestrator_base_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{_orchestrator_base_8hpp_source}{Orchestrator\+Base.\+hpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classicarus_1_1orchestrator_1_1_orchestrator_base_a5f3aa2a9497f49c4dee8215e7eb748d5}\label{classicarus_1_1orchestrator_1_1_orchestrator_base_a5f3aa2a9497f49c4dee8215e7eb748d5} 
+\index{icarus::orchestrator::OrchestratorBase@{icarus::orchestrator::OrchestratorBase}!\_op\_mode@{\_op\_mode}}
+\index{\_op\_mode@{\_op\_mode}!icarus::orchestrator::OrchestratorBase@{icarus::orchestrator::OrchestratorBase}}
+\doxysubsubsection{\texorpdfstring{\_op\_mode}{\_op\_mode}}
+{\footnotesize\ttfamily Orchestrator\+Mode icarus\+::orchestrator\+::\+Orchestrator\+Base\+::\+\_\+op\+\_\+mode = IDLE\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_orchestrator_base_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{_orchestrator_base_8hpp_source}{Orchestrator\+Base.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Orchestrator/include/Orchestrator\+Base.\+hpp\item 
+Orchestrator/src/Orchestrator\+Base.\+cpp\end{DoxyCompactItemize}

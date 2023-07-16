@@ -9,5 +9,5 @@ include_directories("${EIGEN3_INCLUDE_DIR}")
 add_subdirectory("${PROJECT_SOURCE_DIR}/common" "${PROJECT_SOURCE_DIR}/common/output")
 
 add_subdirectory("${PROJECT_SOURCE_DIR}/Orchestrator" "${PROJECT_SOURCE_DIR}/Orchestrator/output")
-add_subdirectory("${PROJECT_SOURCE_DIR}/Simulator/DynamicModel" "${PROJECT_SOURCE_DIR}/Simulator/DynamicModel/output")
+add_subdirectory("${PROJECT_SOURCE_DIR}/Simulator/DynamicSimulation" "${PROJECT_SOURCE_DIR}/Simulator/DynamicSimulation/output")
 add_subdirectory("${PROJECT_SOURCE_DIR}/Simulator/Sensor" "${PROJECT_SOURCE_DIR}/Simulator/Sensor/output")

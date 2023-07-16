@@ -1,0 +1,125 @@
+\doxysection{Wind\+Models.\+hpp}
+\hypertarget{_wind_models_8hpp_source}{}\label{_wind_models_8hpp_source}\index{Simulator/DynamicSimulation/include/environment/WindModels.hpp@{Simulator/DynamicSimulation/include/environment/WindModels.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ Samuel\ on\ 21/06/2023.}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ IC\_SOFT\_ATMOSPHERE\_HPP}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ IC\_SOFT\_ATMOSPHERE\_HPP}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <Eigen/Dense>}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}Noise.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00014}00014\ \textcolor{keyword}{namespace\ }icarus::simulator::env\ \{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00016}\mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_horizontal_wind_model}{00016}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_horizontal_wind_model}{HorizontalWindModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_horizontal_wind_model}{HorizontalWindModel}}(\textcolor{keywordtype}{double}\ dt,\ \textcolor{keywordtype}{double}\ wind\_from\_deg,\ \textcolor{keywordtype}{double}\ mean\_vel):}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_wind\_from\_rad\{wind\_from\_deg\ *\ M\_PI\ /\ 180\},\ \_mean\_vel\{mean\_vel\},\ \_max\_delta\_rad\{5\ *\ dt\}\ \{\}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ update()\{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \_wind\_from\_rad\ +=\ noise.\mbox{\hyperlink{classicarus_1_1_white_noise_aa954546d6fb8f2d226e4936eb3478da1}{get\_value\_in\_range}}(-\/\_max\_delta\_rad,\ \_max\_delta\_rad);}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00025}00025\ \ \ \ \ \ \ \ \ Eigen::Vector3d\ get\_wind\_direction\_NED()\{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ update();}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{-\/\_mean\_vel\ *\ cos(\_wind\_from\_rad),\ -\/\_mean\_vel\ *\ sin(\_wind\_from\_rad),\ 0\};}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_wind\_from\_rad;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_mean\_vel;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_max\_delta\_rad;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classicarus_1_1_white_noise}{WhiteNoise}}\ noise;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00036}00036\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00038}\mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_gust_model}{00038}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_gust_model}{GustModel}}\ \{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00039}00039\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_gust_model}{GustModel}}(\textcolor{keywordtype}{double}\ dt,\ \textcolor{keywordtype}{double}\ wind\_from\_deg,\ \textcolor{keywordtype}{double}\ mean\_vel):}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \_dt\{dt\},\ \_wind\_from\_rad\{wind\_from\_deg\ *\ M\_PI\ /\ 180\},\ \_mean\_vel\{mean\_vel\}\ \{\}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ update()\{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \_gust\_vel\ =\ \_nominal\_vel\ *\ get\_gust\_profile(t\_now\ -\/\ \_start\_in);}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(t\_now\ -\/\ \_start\_in\ >\ \_total\_duration)\ \{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t\_now\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ is\_scheduled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ is\_active\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00053}00053\ \ \ \ \ \ \ \ \ Eigen::Vector3d\ get\_wind\_direction\_NED()\{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(is\_scheduled\ \&\&\ t\_now\ >=\ \_start\_in)\{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ is\_active\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(is\_active)\{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ update();}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ t\_now\ +=\ \_dt;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{-\/\_gust\_vel\ *\ cos(\_wind\_from\_rad),\ -\/\_gust\_vel\ *\ sin(\_wind\_from\_rad),\ 0\};}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00066}00066\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ get\_gust\_profile(\textcolor{keywordtype}{double}\ t)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(t\ <\ 0)}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(t\ <=\ \_io\_duration)}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sin((M\_PI\ /\ 2)\ *\ (t\ /\ \_io\_duration));}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(t\ -\/\ \_io\_duration\ <=\ \_nominal\_duration)}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(t\ -\/\ (\_io\_duration\ +\ \_nominal\_duration)\ <=\ \_io\_duration)}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ sin((M\_PI\ /\ 2)\ *\ ((1\ -\/\ t)\ /\ \_io\_duration));}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ schedule\_gust()\{}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \_nominal\_vel\ =\ \_mean\_vel*(\ 1\ +\ noise.\mbox{\hyperlink{classicarus_1_1_white_noise_aa954546d6fb8f2d226e4936eb3478da1}{get\_value\_in\_range}}(-\/\_delta\_vel,\ \_delta\_vel));}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \_total\_duration\ =\ 5\ +\ 4./\_delta\_vel\ *\ (\_mean\_vel\ -\/\ \_nominal\_vel);}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \_nominal\_duration\ =\ \_total\_duration\ *\ (0.7\ +\ noise.\mbox{\hyperlink{classicarus_1_1_white_noise_aa954546d6fb8f2d226e4936eb3478da1}{get\_value\_in\_range}}(-\/\_delta\_duration,\ \_delta\_duration));}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \_io\_duration\ =\ (\_total\_duration\ -\/\ \_nominal\_duration)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \_start\_in\ =\ t\_now\ +\ noise.\mbox{\hyperlink{classicarus_1_1_white_noise_aa954546d6fb8f2d226e4936eb3478da1}{get\_value\_in\_range}}(\_delta\_start[0],\ \_delta\_start[1]);}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00093}00093\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_dt;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_wind\_from\_rad;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_mean\_vel;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ t\_now\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_scheduled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_active\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_delta\_vel\ =\ 0.3;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_delta\_duration\ =\ 0.1;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_delta\_start[2]\ =\ \{0.4,\ 5\};}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_gust\_vel\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_nominal\_vel\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_total\_duration\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_nominal\_duration\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_io\_duration\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_start\_in\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classicarus_1_1_white_noise}{WhiteNoise}}\ noise;}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00115}00115\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00117}00117\ \}}
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_wind_models_8hpp_source_l00119}00119\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//IC\_SOFT\_ATMOSPHERE\_HPP}}
+
+\end{DoxyCode}

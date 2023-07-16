@@ -1,0 +1,298 @@
+\doxysection{icarus\+::simulator\+::Flight\+Simulator\+Base Class Reference}
+\hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base}{}\label{classicarus_1_1simulator_1_1_flight_simulator_base}\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+Inheritance diagram for icarus\+::simulator\+::Flight\+Simulator\+Base\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d8/d0c/classicarus_1_1simulator_1_1_flight_simulator_base}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Dynamics\+Model $>$ }\\void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_afa0b6f481da1ea16d9813b15ef9ec7ad}{init\+\_\+simulator}} (std\+::string \&params\+\_\+path)
+\item 
+void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a4953333973c7ebd984ce55ea1225cb75}{run}} ()
+\item 
+virtual void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_add1686f978d703c123624f857ddd876b}{run\+\_\+once}} ()
+\item 
+virtual void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_adef5c8c106dd32eccaddd7f0b16a4ff4}{get\+\_\+targets}} ()
+\item 
+virtual void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a345f2763a084385c1d44dec2dfef53f2}{get\+\_\+state}} ()
+\item 
+virtual void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a7f90a31b023b6e3cb08708058283091a}{get\+\_\+control}} ()
+\item 
+virtual void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_ae3762531f6c7242a89a457c04e6ea075}{output}} ()
+\item 
+void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a0165989f24a46fb2c97031c0b02450cd}{simulate\+\_\+env}} ()
+\item 
+void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_add656db01922e5063c1f9bf96b7b571e}{simulate\+\_\+step}} ()
+\item 
+virtual bool \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_af77151c13d89cf1d375073737dcaa4e0}{ok}} ()
+\item 
+void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a1bb2e50000dd9467e98fa0c094bf9ec9}{sleep}} ()
+\item 
+void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a19ca88af0b1702012bd83fd8151f1eea}{set\+\_\+time\+\_\+step}} (double dt)
+\item 
+double \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_ae1d0c4e41ab3108649197bee153843a9}{get\+\_\+time\+\_\+step}} () const
+\item 
+void \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_ae9516fbd9764460bbdbe9f3bc237b600}{set\+\_\+sim\+\_\+speed}} (double rates\+\_\+hz)
+\item 
+double \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a6e8b555936df92de495010893033d4d4}{get\+\_\+sim\+\_\+speed}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_interface}{Simulation\+Engine\+Interface}} $>$ \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_ab56da4c4d1f90ebd492f7ca5a3565fef}{\+\_\+engine}}
+\item 
+\mbox{\hyperlink{classicarus_1_1simulator_1_1_simulation_rates}{Simulation\+Rates}} \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_abc3876ba30063d71e80010d0a4058200}{\+\_\+rates}}
+\item 
+\mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_horizontal_wind_model}{Horizontal\+Wind\+Model}} \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a9d3f4828ca67da991d8683f724eb305d}{\+\_\+horizontal\+\_\+wind}}
+\item 
+\mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_gust_model}{Gust\+Model}} \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a08742dbe35417a92d93249462b422200}{\+\_\+gust}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters}{icarus\+::simulator\+::\+Flight\+Simulator\+Parameters}}}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters_a2ba2575e5d25320509e7510707478101}{\+\_\+dt}} = 0
+\item 
+\mbox{\hyperlink{structicarus_1_1_state}{State}} \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters_aedc30f538211102fde35294183d02131}{\+\_\+state}}
+\item 
+\mbox{\hyperlink{structicarus_1_1_control}{Control}} \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters_acae1b99c067211be2939c44cbbba0be3}{\+\_\+control}}
+\item 
+\mbox{\hyperlink{structicarus_1_1_target}{Target}} \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters_a303d2c9f8c5425164841277d6c0f963b}{\+\_\+target}}
+\item 
+\mbox{\hyperlink{structicarus_1_1_environment}{Environment}} \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters_a8c658054f9baa687b3de6b605ff1b23f}{\+\_\+env}}
+\item 
+\mbox{\hyperlink{structicarus_1_1_simulation_output}{Simulation\+Output}} \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters_a444fd36a6a51bbfafb99fbc46690984f}{\+\_\+output}}
+\item 
+\mbox{\hyperlink{structicarus_1_1_sensor}{Sensor}}$<$ 6, 2, 2 $>$ \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters_a09e1655cb978602e4af832948dd3d51f}{imu}}
+\item 
+\mbox{\hyperlink{structicarus_1_1_sensor}{Sensor}}$<$ 1, 1, 1 $>$ \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters_a901214d665698592cd7ba463fb1bd25a}{altimeter}}
+\item 
+\mbox{\hyperlink{structicarus_1_1_sensor}{Sensor}}$<$ 3, 1, 1 $>$ \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters_ab736f3f5362e13b89083b9b86b403a19}{gps}}
+\item 
+\mbox{\hyperlink{structicarus_1_1_sensor}{Sensor}}$<$ 3, 1, 1 $>$ \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters_a0735f59a8423bb579e119530de1a6ece}{magnetometer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00038}{38}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_a7f90a31b023b6e3cb08708058283091a}\label{classicarus_1_1simulator_1_1_flight_simulator_base_a7f90a31b023b6e3cb08708058283091a} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!get\_control@{get\_control}}
+\index{get\_control@{get\_control}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{get\_control()}{get\_control()}}
+{\footnotesize\ttfamily virtual void icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::get\+\_\+control (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\doxylink{structicarus_1_1_control}{Control} ENDPOINT (subclass defined)
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00072}{72}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_a6e8b555936df92de495010893033d4d4}\label{classicarus_1_1simulator_1_1_flight_simulator_base_a6e8b555936df92de495010893033d4d4} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!get\_sim\_speed@{get\_sim\_speed}}
+\index{get\_sim\_speed@{get\_sim\_speed}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{get\_sim\_speed()}{get\_sim\_speed()}}
+{\footnotesize\ttfamily double icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::get\+\_\+sim\+\_\+speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00101}{101}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_a345f2763a084385c1d44dec2dfef53f2}\label{classicarus_1_1simulator_1_1_flight_simulator_base_a345f2763a084385c1d44dec2dfef53f2} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!get\_state@{get\_state}}
+\index{get\_state@{get\_state}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{get\_state()}{get\_state()}}
+{\footnotesize\ttfamily virtual void icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::get\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\doxylink{structicarus_1_1_state}{State} ENDPOINT (subclass defined)
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00066}{66}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_adef5c8c106dd32eccaddd7f0b16a4ff4}\label{classicarus_1_1simulator_1_1_flight_simulator_base_adef5c8c106dd32eccaddd7f0b16a4ff4} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!get\_targets@{get\_targets}}
+\index{get\_targets@{get\_targets}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{get\_targets()}{get\_targets()}}
+{\footnotesize\ttfamily virtual void icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::get\+\_\+targets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\doxylink{structicarus_1_1_target}{Target} ENDPOINT (subclass defined)
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00060}{60}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_ae1d0c4e41ab3108649197bee153843a9}\label{classicarus_1_1simulator_1_1_flight_simulator_base_ae1d0c4e41ab3108649197bee153843a9} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!get\_time\_step@{get\_time\_step}}
+\index{get\_time\_step@{get\_time\_step}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{get\_time\_step()}{get\_time\_step()}}
+{\footnotesize\ttfamily double icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::get\+\_\+time\+\_\+step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00098}{98}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_afa0b6f481da1ea16d9813b15ef9ec7ad}\label{classicarus_1_1simulator_1_1_flight_simulator_base_afa0b6f481da1ea16d9813b15ef9ec7ad} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!init\_simulator@{init\_simulator}}
+\index{init\_simulator@{init\_simulator}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{init\_simulator()}{init\_simulator()}}
+{\footnotesize\ttfamily template$<$typename Dynamics\+Model $>$ \\
+void Flight\+Simulator\+Base\+::init\+\_\+simulator (\begin{DoxyParamCaption}\item[{std\+::string \&}]{params\+\_\+path }\end{DoxyParamCaption})}
+
+Called at the beginning of execution~\newline
+Sets up Simulation Engine, rates, default values (env, state, ...), ...
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_flight_simulator_base_8cpp_source}{Flight\+Simulator\+Base.\+cpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_af77151c13d89cf1d375073737dcaa4e0}\label{classicarus_1_1simulator_1_1_flight_simulator_base_af77151c13d89cf1d375073737dcaa4e0} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!ok@{ok}}
+\index{ok@{ok}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{ok()}{ok()}}
+{\footnotesize\ttfamily virtual bool icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::ok (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Whether the simulator should run (subclass defined)
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00088}{88}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_ae3762531f6c7242a89a457c04e6ea075}\label{classicarus_1_1simulator_1_1_flight_simulator_base_ae3762531f6c7242a89a457c04e6ea075} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!output@{output}}
+\index{output@{output}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily virtual void icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Output ENDPOINT (subclass defined)
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00078}{78}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_a4953333973c7ebd984ce55ea1225cb75}\label{classicarus_1_1simulator_1_1_flight_simulator_base_a4953333973c7ebd984ce55ea1225cb75} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!run@{run}}
+\index{run@{run}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Flight\+Simulator\+Base\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+RUN ENDPOINT~\newline
+Checks if the simulator should run \& call run\+\_\+once if necessary~\newline
+(run\+\_\+once handles timings)
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_flight_simulator_base_8cpp_source}{Flight\+Simulator\+Base.\+cpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_add1686f978d703c123624f857ddd876b}\label{classicarus_1_1simulator_1_1_flight_simulator_base_add1686f978d703c123624f857ddd876b} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!run\_once@{run\_once}}
+\index{run\_once@{run\_once}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{run\_once()}{run\_once()}}
+{\footnotesize\ttfamily virtual void icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::run\+\_\+once (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+SINGLE CYCLE OF RUN (sublcass defined due to timings, ...) ~\newline
+\textbackslash{}\+ORDER \begin{quote}
+get\+\_\+targets~\newline
+simulate\+\_\+env~\newline
+get\+\_\+state ~\newline
+get\+\_\+control~\newline
+simulate\+\_\+step (compute next state)~\newline
+output~\newline
+\end{quote}
+At the end of each loop, call \doxylink{classicarus_1_1simulator_1_1_simulation_rates_acaedea41a4f85481b907a7024dcd04d2}{Simulation\+Rates\+::sleep} (ensures the simulator doesn\textquotesingle{}t drift ahead)
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00044}{44}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_ae9516fbd9764460bbdbe9f3bc237b600}\label{classicarus_1_1simulator_1_1_flight_simulator_base_ae9516fbd9764460bbdbe9f3bc237b600} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!set\_sim\_speed@{set\_sim\_speed}}
+\index{set\_sim\_speed@{set\_sim\_speed}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{set\_sim\_speed()}{set\_sim\_speed()}}
+{\footnotesize\ttfamily void icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::set\+\_\+sim\+\_\+speed (\begin{DoxyParamCaption}\item[{double}]{rates\+\_\+hz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00100}{100}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_a19ca88af0b1702012bd83fd8151f1eea}\label{classicarus_1_1simulator_1_1_flight_simulator_base_a19ca88af0b1702012bd83fd8151f1eea} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!set\_time\_step@{set\_time\_step}}
+\index{set\_time\_step@{set\_time\_step}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{set\_time\_step()}{set\_time\_step()}}
+{\footnotesize\ttfamily void icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::set\+\_\+time\+\_\+step (\begin{DoxyParamCaption}\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00097}{97}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_a0165989f24a46fb2c97031c0b02450cd}\label{classicarus_1_1simulator_1_1_flight_simulator_base_a0165989f24a46fb2c97031c0b02450cd} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!simulate\_env@{simulate\_env}}
+\index{simulate\_env@{simulate\_env}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{simulate\_env()}{simulate\_env()}}
+{\footnotesize\ttfamily void Flight\+Simulator\+Base\+::simulate\+\_\+env (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Computes environment settings in each simulation tick
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_flight_simulator_base_8cpp_source}{Flight\+Simulator\+Base.\+cpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_add656db01922e5063c1f9bf96b7b571e}\label{classicarus_1_1simulator_1_1_flight_simulator_base_add656db01922e5063c1f9bf96b7b571e} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!simulate\_step@{simulate\_step}}
+\index{simulate\_step@{simulate\_step}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{simulate\_step()}{simulate\_step()}}
+{\footnotesize\ttfamily void Flight\+Simulator\+Base\+::simulate\+\_\+step (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calls the engine to compute the new state
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{_flight_simulator_base_8cpp_source}{Flight\+Simulator\+Base.\+cpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_a1bb2e50000dd9467e98fa0c094bf9ec9}\label{classicarus_1_1simulator_1_1_flight_simulator_base_a1bb2e50000dd9467e98fa0c094bf9ec9} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!sleep@{sleep}}
+\index{sleep@{sleep}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}}
+{\footnotesize\ttfamily void icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::sleep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00095}{95}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_ab56da4c4d1f90ebd492f7ca5a3565fef}\label{classicarus_1_1simulator_1_1_flight_simulator_base_ab56da4c4d1f90ebd492f7ca5a3565fef} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!\_engine@{\_engine}}
+\index{\_engine@{\_engine}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{\_engine}{\_engine}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_interface}{Simulation\+Engine\+Interface}}$>$ icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::\+\_\+engine\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00105}{105}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_a08742dbe35417a92d93249462b422200}\label{classicarus_1_1simulator_1_1_flight_simulator_base_a08742dbe35417a92d93249462b422200} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!\_gust@{\_gust}}
+\index{\_gust@{\_gust}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{\_gust}{\_gust}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_gust_model}{Gust\+Model}} icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::\+\_\+gust\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00110}{110}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_a9d3f4828ca67da991d8683f724eb305d}\label{classicarus_1_1simulator_1_1_flight_simulator_base_a9d3f4828ca67da991d8683f724eb305d} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!\_horizontal\_wind@{\_horizontal\_wind}}
+\index{\_horizontal\_wind@{\_horizontal\_wind}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{\_horizontal\_wind}{\_horizontal\_wind}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_horizontal_wind_model}{Horizontal\+Wind\+Model}} icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::\+\_\+horizontal\+\_\+wind\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00109}{109}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_flight_simulator_base_abc3876ba30063d71e80010d0a4058200}\label{classicarus_1_1simulator_1_1_flight_simulator_base_abc3876ba30063d71e80010d0a4058200} 
+\index{icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}!\_rates@{\_rates}}
+\index{\_rates@{\_rates}!icarus::simulator::FlightSimulatorBase@{icarus::simulator::FlightSimulatorBase}}
+\doxysubsubsection{\texorpdfstring{\_rates}{\_rates}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classicarus_1_1simulator_1_1_simulation_rates}{Simulation\+Rates}} icarus\+::simulator\+::\+Flight\+Simulator\+Base\+::\+\_\+rates\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_flight_simulator_base_8hpp_source_l00106}{106}} of file \mbox{\hyperlink{_flight_simulator_base_8hpp_source}{Flight\+Simulator\+Base.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Simulator/\+Dynamic\+Simulation/include/Flight\+Simulator\+Base.\+hpp\item 
+Simulator/\+Dynamic\+Simulation/src/Flight\+Simulator\+Base.\+cpp\end{DoxyCompactItemize}

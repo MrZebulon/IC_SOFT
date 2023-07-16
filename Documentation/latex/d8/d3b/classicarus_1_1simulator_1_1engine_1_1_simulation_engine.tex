@@ -1,0 +1,69 @@
+\doxysection{icarus\+::simulator\+::engine\+::Simulation\+Engine\texorpdfstring{$<$}{<} Dynamics\+Model \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classicarus_1_1simulator_1_1engine_1_1_simulation_engine}{}\label{classicarus_1_1simulator_1_1engine_1_1_simulation_engine}\index{icarus::simulator::engine::SimulationEngine$<$ DynamicsModel $>$@{icarus::simulator::engine::SimulationEngine$<$ DynamicsModel $>$}}
+Inheritance diagram for icarus\+::simulator\+::engine\+::Simulation\+Engine\texorpdfstring{$<$}{<} Dynamics\+Model \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.509434cm]{d8/d3b/classicarus_1_1simulator_1_1engine_1_1_simulation_engine}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structicarus_1_1_state}{State}} \mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_a794ed27c5ba0596f62bb45f8a4d9dd8b}{single\+\_\+step}} (const \mbox{\hyperlink{structicarus_1_1_state}{State}} \&state, const \mbox{\hyperlink{structicarus_1_1_control}{Control}} \&control, const \mbox{\hyperlink{structicarus_1_1_environment}{Environment}} \&env, double dt) override
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structicarus_1_1_state}{State}} \mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_interface_a343ab42dbe83d5f022d86933ab362f0b}{single\+\_\+step}} (const \mbox{\hyperlink{structicarus_1_1_state}{State}} \&state, const \mbox{\hyperlink{structicarus_1_1_control}{Control}} \&control, const \mbox{\hyperlink{structicarus_1_1_environment}{Environment}} \&env, double dt)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_engine_plant}{Engine\+Plant}}$<$ Dynamics\+Model $>$ \mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_a879f40f8e8d0a984858a437fb3cbfe52}{plant}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Dynamics\+Model$>$\newline
+class icarus\+::simulator\+::engine\+::\+Simulation\+Engine$<$ Dynamics\+Model $>$}
+
+
+Definition at line \mbox{\hyperlink{_simulation_engine_8hpp_source_l00015}{15}} of file \mbox{\hyperlink{_simulation_engine_8hpp_source}{Simulation\+Engine.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_a794ed27c5ba0596f62bb45f8a4d9dd8b}\label{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_a794ed27c5ba0596f62bb45f8a4d9dd8b} 
+\index{icarus::simulator::engine::SimulationEngine$<$ DynamicsModel $>$@{icarus::simulator::engine::SimulationEngine$<$ DynamicsModel $>$}!single\_step@{single\_step}}
+\index{single\_step@{single\_step}!icarus::simulator::engine::SimulationEngine$<$ DynamicsModel $>$@{icarus::simulator::engine::SimulationEngine$<$ DynamicsModel $>$}}
+\doxysubsubsection{\texorpdfstring{single\_step()}{single\_step()}}
+{\footnotesize\ttfamily template$<$typename Dynamics\+Model $>$ \\
+\mbox{\hyperlink{structicarus_1_1_state}{State}} Simulation\+Engine\+::single\+\_\+step (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structicarus_1_1_state}{State}} \&}]{state,  }\item[{const \mbox{\hyperlink{structicarus_1_1_control}{Control}} \&}]{control,  }\item[{const \mbox{\hyperlink{structicarus_1_1_environment}{Environment}} \&}]{env,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_interface_a343ab42dbe83d5f022d86933ab362f0b}{icarus\+::simulator\+::engine\+::\+Simulation\+Engine\+Interface}}.
+
+
+
+Definition at line \mbox{\hyperlink{_simulation_engine_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_simulation_engine_8cpp_source}{Simulation\+Engine.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_a879f40f8e8d0a984858a437fb3cbfe52}\label{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_a879f40f8e8d0a984858a437fb3cbfe52} 
+\index{icarus::simulator::engine::SimulationEngine$<$ DynamicsModel $>$@{icarus::simulator::engine::SimulationEngine$<$ DynamicsModel $>$}!plant@{plant}}
+\index{plant@{plant}!icarus::simulator::engine::SimulationEngine$<$ DynamicsModel $>$@{icarus::simulator::engine::SimulationEngine$<$ DynamicsModel $>$}}
+\doxysubsubsection{\texorpdfstring{plant}{plant}}
+{\footnotesize\ttfamily template$<$typename Dynamics\+Model $>$ \\
+\mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_engine_plant}{Engine\+Plant}}$<$Dynamics\+Model$>$ \mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_simulation_engine}{icarus\+::simulator\+::engine\+::\+Simulation\+Engine}}$<$ Dynamics\+Model $>$\+::plant}
+
+
+
+Definition at line \mbox{\hyperlink{_simulation_engine_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_simulation_engine_8hpp_source}{Simulation\+Engine.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Simulator/\+Dynamic\+Simulation/include/engine/Simulation\+Engine.\+hpp\item 
+Simulator/\+Dynamic\+Simulation/src/engine/Simulation\+Engine.\+cpp\end{DoxyCompactItemize}

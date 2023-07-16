@@ -1,0 +1,95 @@
+\doxysection{Flight\+Simulator\+Base.\+hpp}
+\hypertarget{_flight_simulator_base_8hpp_source}{}\label{_flight_simulator_base_8hpp_source}\index{Simulator/DynamicSimulation/include/FlightSimulatorBase.hpp@{Simulator/DynamicSimulation/include/FlightSimulatorBase.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ Samuel\ on\ 16/06/2023.}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ IC\_SOFT\_FLIGHTSIMULATORBASE\_HPP}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ IC\_SOFT\_FLIGHTSIMULATORBASE\_HPP}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}SimulationRates.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}engine/SimulationEngine.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}environment/WindModels.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00014}00014\ \textcolor{keyword}{using\ namespace\ }icarus::simulator::env;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00015}00015\ \textcolor{keyword}{using\ namespace\ }icarus::simulator::engine;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00017}00017\ \textcolor{keyword}{namespace\ }icarus::simulator\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00019}\mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters}{00019}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters}{FlightSimulatorParameters}}\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{comment}{//TIME\ STEP}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \_dt\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//FUNDAMENTAL\ BLOCS}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structicarus_1_1_state}{State}}\ \_state;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structicarus_1_1_control}{Control}}\ \_control;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structicarus_1_1_target}{Target}}\ \_target;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structicarus_1_1_environment}{Environment}}\ \_env;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structicarus_1_1_simulation_output}{SimulationOutput}}\ \_output;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//SENSORS}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structicarus_1_1_sensor}{Sensor<6,\ 2,\ 2>}}\ imu;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structicarus_1_1_sensor}{Sensor<1,\ 1,\ 1>}}\ altimeter;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structicarus_1_1_sensor}{Sensor<3,\ 1,\ 1>}}\ gps;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structicarus_1_1_sensor}{Sensor<3,\ 1,\ 1>}}\ magnetometer;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00036}00036\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00038}\mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base}{00038}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base}{FlightSimulatorBase}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{structicarus_1_1simulator_1_1_flight_simulator_parameters}{FlightSimulatorParameters}}\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00039}00039\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ DynamicsModel>}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_afa0b6f481da1ea16d9813b15ef9ec7ad}{init\_simulator}}(std::string\&\ params\_path);}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a4953333973c7ebd984ce55ea1225cb75}{run}}();}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00044}\mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_add1686f978d703c123624f857ddd876b}{00044}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_add1686f978d703c123624f857ddd876b}{run\_once}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}FlightSimulatorBase::run\_once"{}}\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}\ <<\ \textcolor{stringliteral}{"{}override\ me\ !"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00060}\mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_adef5c8c106dd32eccaddd7f0b16a4ff4}{00060}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_adef5c8c106dd32eccaddd7f0b16a4ff4}{get\_targets}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}FlightSimulatorBase::get\_targets"{}}\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}\ <<\ \textcolor{stringliteral}{"{}override\ me\ !"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00066}\mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a345f2763a084385c1d44dec2dfef53f2}{00066}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a345f2763a084385c1d44dec2dfef53f2}{get\_state}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}FlightSimulatorBase::get\_state"{}}\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}\ <<\ \textcolor{stringliteral}{"{}override\ me\ !"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00072}\mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a7f90a31b023b6e3cb08708058283091a}{00072}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a7f90a31b023b6e3cb08708058283091a}{get\_control}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}FlightSimulatorBase::get\_control"{}}\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}\ <<\ \textcolor{stringliteral}{"{}override\ me\ !"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00078}\mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_ae3762531f6c7242a89a457c04e6ea075}{00078}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_ae3762531f6c7242a89a457c04e6ea075}{output}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}FlightSimulatorBase::output"{}}\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}\ <<\ \textcolor{stringliteral}{"{}override\ me\ !"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_a0165989f24a46fb2c97031c0b02450cd}{simulate\_env}}();}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_add656db01922e5063c1f9bf96b7b571e}{simulate\_step}}();}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00088}\mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_af77151c13d89cf1d375073737dcaa4e0}{00088}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classicarus_1_1simulator_1_1_flight_simulator_base_af77151c13d89cf1d375073737dcaa4e0}{ok}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}FlightSimulatorBase::ok"{}}\ <<\ \textcolor{stringliteral}{"{}\ :\ "{}}\ <<\ \textcolor{stringliteral}{"{}override\ me\ !"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ sleep()\ \{\ \_rates.\mbox{\hyperlink{classicarus_1_1simulator_1_1_simulation_rates_acaedea41a4f85481b907a7024dcd04d2}{sleep}}();\ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ set\_time\_step(\textcolor{keywordtype}{double}\ dt)\ \{\ \_dt\ =\ dt;\ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ get\_time\_step()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \_dt;\ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ set\_sim\_speed(\textcolor{keywordtype}{double}\ rates\_hz)\{\ \_rates.set\_rate(rates\_hz);\ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ get\_sim\_speed()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ \_rates.get\_rates\_hz();\ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00103}00103\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Engine\ \&\ clockwork}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00105}00105\ \ \ \ \ \ \ \ \ std::unique\_ptr<SimulationEngineInterface>\ \_engine;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00106}00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classicarus_1_1simulator_1_1_simulation_rates}{SimulationRates}}\ \_rates;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Environment\ simulation}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_horizontal_wind_model}{HorizontalWindModel}}\ \_horizontal\_wind;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classicarus_1_1simulator_1_1env_1_1_gust_model}{GustModel}}\ \_gust;}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00112}00112\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00113}00113\ \}}
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{_flight_simulator_base_8hpp_source_l00116}00116\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//IC\_SOFT\_FLIGHTSIMULATORBASE\_HPP}}
+
+\end{DoxyCode}

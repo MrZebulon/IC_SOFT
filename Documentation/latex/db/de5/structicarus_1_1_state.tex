@@ -1,0 +1,103 @@
+\doxysection{icarus\+::State Struct Reference}
+\hypertarget{structicarus_1_1_state}{}\label{structicarus_1_1_state}\index{icarus::State@{icarus::State}}
+
+
+{\ttfamily \#include $<$Structures.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structicarus_1_1_state}{State}} \mbox{\hyperlink{structicarus_1_1_state_a794157ca6d3b67534a912fe956c069f5}{eigen\+\_\+to\+\_\+state}} (const Eigen\+::\+Vector\+Xd \&vect)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{structicarus_1_1_state_a86e33cdc59241b007b363a5136143c2a}{pos\+\_\+ned}}
+\item 
+Eigen\+::\+Vector3d \mbox{\hyperlink{structicarus_1_1_state_a3074b977b25853de5256e6ece5ac2de0}{vel\+\_\+ned}}
+\item 
+Eigen\+::\+Quaternion$<$ double $>$ \mbox{\hyperlink{structicarus_1_1_state_a648e2095e463e546015376a20fa6c7b7}{q\+\_\+nb}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{structicarus_1_1_state_ad41d90672f14fa5d9ea752c5a48977e3}{STATE\+\_\+\+LENGTH}} = 10
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing the state of the system~\newline
+
+\begin{DoxyItemize}
+\item position in NED frame~\newline
+
+\item velocity in NED frame~\newline
+
+\item orientation (body -\/\texorpdfstring{$>$}{>} NED)~\newline
+
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{_structures_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_structures_8hpp_source}{Structures.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structicarus_1_1_state_a794157ca6d3b67534a912fe956c069f5}\label{structicarus_1_1_state_a794157ca6d3b67534a912fe956c069f5} 
+\index{icarus::State@{icarus::State}!eigen\_to\_state@{eigen\_to\_state}}
+\index{eigen\_to\_state@{eigen\_to\_state}!icarus::State@{icarus::State}}
+\doxysubsubsection{\texorpdfstring{eigen\_to\_state()}{eigen\_to\_state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structicarus_1_1_state}{State}} State\+::eigen\+\_\+to\+\_\+state (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{vect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_structures_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_structures_8cpp_source}{Structures.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structicarus_1_1_state_a86e33cdc59241b007b363a5136143c2a}\label{structicarus_1_1_state_a86e33cdc59241b007b363a5136143c2a} 
+\index{icarus::State@{icarus::State}!pos\_ned@{pos\_ned}}
+\index{pos\_ned@{pos\_ned}!icarus::State@{icarus::State}}
+\doxysubsubsection{\texorpdfstring{pos\_ned}{pos\_ned}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d icarus\+::\+State\+::pos\+\_\+ned}
+
+
+
+Definition at line \mbox{\hyperlink{_structures_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_structures_8hpp_source}{Structures.\+hpp}}.
+
+\Hypertarget{structicarus_1_1_state_a648e2095e463e546015376a20fa6c7b7}\label{structicarus_1_1_state_a648e2095e463e546015376a20fa6c7b7} 
+\index{icarus::State@{icarus::State}!q\_nb@{q\_nb}}
+\index{q\_nb@{q\_nb}!icarus::State@{icarus::State}}
+\doxysubsubsection{\texorpdfstring{q\_nb}{q\_nb}}
+{\footnotesize\ttfamily Eigen\+::\+Quaternion$<$double$>$ icarus\+::\+State\+::q\+\_\+nb}
+
+
+
+Definition at line \mbox{\hyperlink{_structures_8hpp_source_l00022}{22}} of file \mbox{\hyperlink{_structures_8hpp_source}{Structures.\+hpp}}.
+
+\Hypertarget{structicarus_1_1_state_ad41d90672f14fa5d9ea752c5a48977e3}\label{structicarus_1_1_state_ad41d90672f14fa5d9ea752c5a48977e3} 
+\index{icarus::State@{icarus::State}!STATE\_LENGTH@{STATE\_LENGTH}}
+\index{STATE\_LENGTH@{STATE\_LENGTH}!icarus::State@{icarus::State}}
+\doxysubsubsection{\texorpdfstring{STATE\_LENGTH}{STATE\_LENGTH}}
+{\footnotesize\ttfamily constexpr size\+\_\+t icarus\+::\+State\+::\+STATE\+\_\+\+LENGTH = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{_structures_8hpp_source_l00024}{24}} of file \mbox{\hyperlink{_structures_8hpp_source}{Structures.\+hpp}}.
+
+\Hypertarget{structicarus_1_1_state_a3074b977b25853de5256e6ece5ac2de0}\label{structicarus_1_1_state_a3074b977b25853de5256e6ece5ac2de0} 
+\index{icarus::State@{icarus::State}!vel\_ned@{vel\_ned}}
+\index{vel\_ned@{vel\_ned}!icarus::State@{icarus::State}}
+\doxysubsubsection{\texorpdfstring{vel\_ned}{vel\_ned}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d icarus\+::\+State\+::vel\+\_\+ned}
+
+
+
+Definition at line \mbox{\hyperlink{_structures_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{_structures_8hpp_source}{Structures.\+hpp}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/include/Structures.\+hpp\item 
+common/src/Structures.\+cpp\end{DoxyCompactItemize}

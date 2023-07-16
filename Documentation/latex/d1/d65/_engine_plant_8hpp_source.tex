@@ -1,0 +1,25 @@
+\doxysection{Engine\+Plant.\+hpp}
+\hypertarget{_engine_plant_8hpp_source}{}\label{_engine_plant_8hpp_source}\index{Simulator/DynamicSimulation/include/engine/EnginePlant.hpp@{Simulator/DynamicSimulation/include/engine/EnginePlant.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ Samuel\ on\ 16/06/2023.}}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ IC\_SOFT\_ENGINEPLANT\_HPP}}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ IC\_SOFT\_ENGINEPLANT\_HPP}}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00008}00008\ \textcolor{keyword}{namespace\ }icarus::simulator::engine\ \{}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{typename}\ DynamicsModel>}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00014}\mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_engine_plant}{00014}}\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_engine_plant}{EnginePlant}}\ :\ \textcolor{keyword}{public}\ \textcolor{keyword}{virtual}\ DynamicsModel\ \{}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structicarus_1_1_simulation_output}{SimulationOutput}}\ eval\_dynamical\_model\_output(\textcolor{keyword}{const}\ \mbox{\hyperlink{structicarus_1_1_state}{State}}\&\ state,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structicarus_1_1_control}{Control}}\&\ control,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structicarus_1_1_environment}{Environment}}\&\ env)\ \{}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ DynamicsModel::template\ compute\_dynamics(state,\ control,\ env);}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00020}00020\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_engine_plant_8hpp_source_l00023}00023\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//IC\_SOFT\_ENGINEPLANT\_HPP}}
+
+\end{DoxyCode}

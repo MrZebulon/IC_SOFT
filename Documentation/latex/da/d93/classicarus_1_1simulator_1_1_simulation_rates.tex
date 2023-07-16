@@ -1,0 +1,113 @@
+\doxysection{icarus\+::simulator\+::Simulation\+Rates Class Reference}
+\hypertarget{classicarus_1_1simulator_1_1_simulation_rates}{}\label{classicarus_1_1simulator_1_1_simulation_rates}\index{icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classicarus_1_1simulator_1_1_simulation_rates_a129e264fc86ffa4d41114d485de66fea}{set\+\_\+rate}} (double rate\+\_\+hz)
+\item 
+double \mbox{\hyperlink{classicarus_1_1simulator_1_1_simulation_rates_a2480a7c2dfde0dfcf03259246d82a0f8}{get\+\_\+rates\+\_\+hz}} () const
+\item 
+void \mbox{\hyperlink{classicarus_1_1simulator_1_1_simulation_rates_a26072dfeee110d19a49912b4b9f460d2}{set\+\_\+now}} ()
+\item 
+void \mbox{\hyperlink{classicarus_1_1simulator_1_1_simulation_rates_acaedea41a4f85481b907a7024dcd04d2}{sleep}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classicarus_1_1simulator_1_1_simulation_rates_a78c5925297b65913f0735a1a70046e70}{set\+\_\+rate\+\_\+us}} (long ref\+\_\+duration)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{classicarus_1_1simulator_1_1_simulation_rates_a28ed3986efbe8d898fb9b4671bae6952}{\+\_\+ref\+\_\+duration}} = 1e6/100
+\item 
+steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{classicarus_1_1simulator_1_1_simulation_rates_ac86278d624c588aea54f22e1ae44227f}{\+\_\+ref\+\_\+time}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_simulation_rates_8hpp_source_l00016}{16}} of file \mbox{\hyperlink{_simulation_rates_8hpp_source}{Simulation\+Rates.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classicarus_1_1simulator_1_1_simulation_rates_a2480a7c2dfde0dfcf03259246d82a0f8}\label{classicarus_1_1simulator_1_1_simulation_rates_a2480a7c2dfde0dfcf03259246d82a0f8} 
+\index{icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}!get\_rates\_hz@{get\_rates\_hz}}
+\index{get\_rates\_hz@{get\_rates\_hz}!icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}}
+\doxysubsubsection{\texorpdfstring{get\_rates\_hz()}{get\_rates\_hz()}}
+{\footnotesize\ttfamily double icarus\+::simulator\+::\+Simulation\+Rates\+::get\+\_\+rates\+\_\+hz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_simulation_rates_8hpp_source_l00035}{35}} of file \mbox{\hyperlink{_simulation_rates_8hpp_source}{Simulation\+Rates.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_simulation_rates_a26072dfeee110d19a49912b4b9f460d2}\label{classicarus_1_1simulator_1_1_simulation_rates_a26072dfeee110d19a49912b4b9f460d2} 
+\index{icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}!set\_now@{set\_now}}
+\index{set\_now@{set\_now}!icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}}
+\doxysubsubsection{\texorpdfstring{set\_now()}{set\_now()}}
+{\footnotesize\ttfamily void icarus\+::simulator\+::\+Simulation\+Rates\+::set\+\_\+now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_simulation_rates_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{_simulation_rates_8hpp_source}{Simulation\+Rates.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_simulation_rates_a129e264fc86ffa4d41114d485de66fea}\label{classicarus_1_1simulator_1_1_simulation_rates_a129e264fc86ffa4d41114d485de66fea} 
+\index{icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}!set\_rate@{set\_rate}}
+\index{set\_rate@{set\_rate}!icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}}
+\doxysubsubsection{\texorpdfstring{set\_rate()}{set\_rate()}}
+{\footnotesize\ttfamily void icarus\+::simulator\+::\+Simulation\+Rates\+::set\+\_\+rate (\begin{DoxyParamCaption}\item[{double}]{rate\+\_\+hz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line \mbox{\hyperlink{_simulation_rates_8hpp_source_l00031}{31}} of file \mbox{\hyperlink{_simulation_rates_8hpp_source}{Simulation\+Rates.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_simulation_rates_a78c5925297b65913f0735a1a70046e70}\label{classicarus_1_1simulator_1_1_simulation_rates_a78c5925297b65913f0735a1a70046e70} 
+\index{icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}!set\_rate\_us@{set\_rate\_us}}
+\index{set\_rate\_us@{set\_rate\_us}!icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}}
+\doxysubsubsection{\texorpdfstring{set\_rate\_us()}{set\_rate\_us()}}
+{\footnotesize\ttfamily void icarus\+::simulator\+::\+Simulation\+Rates\+::set\+\_\+rate\+\_\+us (\begin{DoxyParamCaption}\item[{long}]{ref\+\_\+duration }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_simulation_rates_8hpp_source_l00021}{21}} of file \mbox{\hyperlink{_simulation_rates_8hpp_source}{Simulation\+Rates.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_simulation_rates_acaedea41a4f85481b907a7024dcd04d2}\label{classicarus_1_1simulator_1_1_simulation_rates_acaedea41a4f85481b907a7024dcd04d2} 
+\index{icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}!sleep@{sleep}}
+\index{sleep@{sleep}!icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}}
+\doxysubsubsection{\texorpdfstring{sleep()}{sleep()}}
+{\footnotesize\ttfamily void icarus\+::simulator\+::\+Simulation\+Rates\+::sleep (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Ensures the simulator doesn\textquotesingle{}t drift ahead by sleeping just the right amount at the ned of each loop
+
+Definition at line \mbox{\hyperlink{_simulation_rates_8hpp_source_l00043}{43}} of file \mbox{\hyperlink{_simulation_rates_8hpp_source}{Simulation\+Rates.\+hpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classicarus_1_1simulator_1_1_simulation_rates_a28ed3986efbe8d898fb9b4671bae6952}\label{classicarus_1_1simulator_1_1_simulation_rates_a28ed3986efbe8d898fb9b4671bae6952} 
+\index{icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}!\_ref\_duration@{\_ref\_duration}}
+\index{\_ref\_duration@{\_ref\_duration}!icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}}
+\doxysubsubsection{\texorpdfstring{\_ref\_duration}{\_ref\_duration}}
+{\footnotesize\ttfamily long icarus\+::simulator\+::\+Simulation\+Rates\+::\+\_\+ref\+\_\+duration = 1e6/100\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_simulation_rates_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{_simulation_rates_8hpp_source}{Simulation\+Rates.\+hpp}}.
+
+\Hypertarget{classicarus_1_1simulator_1_1_simulation_rates_ac86278d624c588aea54f22e1ae44227f}\label{classicarus_1_1simulator_1_1_simulation_rates_ac86278d624c588aea54f22e1ae44227f} 
+\index{icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}!\_ref\_time@{\_ref\_time}}
+\index{\_ref\_time@{\_ref\_time}!icarus::simulator::SimulationRates@{icarus::simulator::SimulationRates}}
+\doxysubsubsection{\texorpdfstring{\_ref\_time}{\_ref\_time}}
+{\footnotesize\ttfamily steady\+\_\+clock\+::time\+\_\+point icarus\+::simulator\+::\+Simulation\+Rates\+::\+\_\+ref\+\_\+time\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_simulation_rates_8hpp_source_l00019}{19}} of file \mbox{\hyperlink{_simulation_rates_8hpp_source}{Simulation\+Rates.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Simulator/\+Dynamic\+Simulation/include/Simulation\+Rates.\+hpp\end{DoxyCompactItemize}

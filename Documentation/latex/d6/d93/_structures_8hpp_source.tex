@@ -1,0 +1,72 @@
+\doxysection{Structures.\+hpp}
+\hypertarget{_structures_8hpp_source}{}\label{_structures_8hpp_source}\index{common/include/Structures.hpp@{common/include/Structures.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00001}00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00002}00002\ \textcolor{comment}{//\ Created\ by\ Samuel\ on\ 15/06/2023.}}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00003}00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00005}00005\ \textcolor{preprocessor}{\#ifndef\ IC\_SOFT\_STRUCTURES\_HPP}}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00006}00006\ \textcolor{preprocessor}{\#define\ IC\_SOFT\_STRUCTURES\_HPP}}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <Eigen/Dense>}}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00010}00010\ \textcolor{keyword}{namespace\ }icarus\ \{}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00019}\mbox{\hyperlink{structicarus_1_1_state}{00019}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structicarus_1_1_state}{State}}\ \{}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00020}00020\ \ \ \ \ \ \ \ \ Eigen::Vector3d\ pos\_ned;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00021}00021\ \ \ \ \ \ \ \ \ Eigen::Vector3d\ vel\_ned;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00022}00022\ \ \ \ \ \ \ \ \ Eigen::Quaternion<double>\ q\_nb;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ STATE\_LENGTH\ =\ 10;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structicarus_1_1_state}{State}}\ eigen\_to\_state(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ vect);}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00026}00026\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00036}\mbox{\hyperlink{structicarus_1_1_control}{00036}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structicarus_1_1_control}{Control}}\ \{}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ roll;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ pitch;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ mean\_thrust;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ diff\_thrust;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{size\_t}\ CONTROL\_LENGTH\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{structicarus_1_1_control}{Control}}\ eigen\_to\_control(\textcolor{keyword}{const}\ Eigen::VectorXd\&\ vect);}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00044}00044\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00054}\mbox{\hyperlink{structicarus_1_1_target}{00054}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structicarus_1_1_target}{Target}}\ \{}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00055}00055\ \ \ \ \ \ \ \ \ Eigen::Vector3d\ pos\_ned;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00056}00056\ \ \ \ \ \ \ \ \ Eigen::Vector3d\ vel\_ned;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00057}00057\ \ \ \ \ \ \ \ \ Eigen::Quaterniond\ q\_nb;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00058}00058\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00067}00067\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keywordtype}{size\_t}\ n\_bias,\ \textcolor{keywordtype}{size\_t}\ n\_noise,\ \textcolor{keywordtype}{size\_t}\ n\_drift>}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00068}\mbox{\hyperlink{structicarus_1_1_sensor}{00068}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structicarus_1_1_sensor}{Sensor}}\ \{}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00069}00069\ \ \ \ \ \ \ \ \ Eigen::Matrix<double,\ n\_bias,\ 1>\ data;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00071}00071\ \ \ \ \ \ \ \ \ Eigen::Matrix<double,\ n\_bias,\ 1>\ bias;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00072}00072\ \ \ \ \ \ \ \ \ Eigen::Matrix<double,\ n\_noise,\ 1>\ noise;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00073}00073\ \ \ \ \ \ \ \ \ Eigen::Matrix<double,\ n\_drift,\ 1>\ drift;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00074}00074\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00083}\mbox{\hyperlink{structicarus_1_1_simulation_output}{00083}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structicarus_1_1_simulation_output}{SimulationOutput}}\ \{}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00084}00084\ \ \ \ \ \ \ \ \ Eigen::Vector3d\ d\_pos\_ned;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00085}00085\ \ \ \ \ \ \ \ \ Eigen::Vector3d\ d\_vel\_ned;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00086}00086\ \ \ \ \ \ \ \ \ Eigen::Quaterniond\ d\_q\_nb;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00088}00088\ \ \ \ \ \ \ \ \ Eigen::Vector3d\ airspeed;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00089}00089\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00097}\mbox{\hyperlink{structicarus_1_1_environment}{00097}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structicarus_1_1_environment}{Environment}}\ \{}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00098}00098\ \ \ \ \ \ \ \ \ Eigen::Vector3d\ wind\_velocity\_ned;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ air\_density\_ground;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ temperature;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ humidity;}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00102}00102\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00106}00106\ \}}
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_structures_8hpp_source_l00108}00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//IC\_SOFT\_STRUCTURES\_HPP}}
+
+\end{DoxyCode}

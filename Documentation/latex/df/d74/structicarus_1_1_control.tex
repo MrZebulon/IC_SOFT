@@ -1,0 +1,118 @@
+\doxysection{icarus\+::Control Struct Reference}
+\hypertarget{structicarus_1_1_control}{}\label{structicarus_1_1_control}\index{icarus::Control@{icarus::Control}}
+
+
+{\ttfamily \#include $<$Structures.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structicarus_1_1_control}{Control}} \mbox{\hyperlink{structicarus_1_1_control_a1bd9448860dec4d6438f8667f3318f8e}{eigen\+\_\+to\+\_\+control}} (const Eigen\+::\+Vector\+Xd \&vect)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{structicarus_1_1_control_aa44b510916bab332584ef74fb3e7e72a}{roll}}
+\item 
+double \mbox{\hyperlink{structicarus_1_1_control_abbb6feee2d5084566b6d8667e100fa1d}{pitch}}
+\item 
+double \mbox{\hyperlink{structicarus_1_1_control_a21543a2963191984c5b9883ad48ede80}{mean\+\_\+thrust}}
+\item 
+double \mbox{\hyperlink{structicarus_1_1_control_abc0bbf3259576ecf35ed7ef70941a43c}{diff\+\_\+thrust}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr size\+\_\+t \mbox{\hyperlink{structicarus_1_1_control_a42966eed76b68d20fcb2501be7675586}{CONTROL\+\_\+\+LENGTH}} = 4
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure representing commands being sent to the drone
+
+
+\begin{DoxyItemize}
+\item roll~\newline
+
+\item pitch~\newline
+
+\item mean thrust~\newline
+
+\item differential thrust~\newline
+
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{_structures_8hpp_source_l00036}{36}} of file \mbox{\hyperlink{_structures_8hpp_source}{Structures.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structicarus_1_1_control_a1bd9448860dec4d6438f8667f3318f8e}\label{structicarus_1_1_control_a1bd9448860dec4d6438f8667f3318f8e} 
+\index{icarus::Control@{icarus::Control}!eigen\_to\_control@{eigen\_to\_control}}
+\index{eigen\_to\_control@{eigen\_to\_control}!icarus::Control@{icarus::Control}}
+\doxysubsubsection{\texorpdfstring{eigen\_to\_control()}{eigen\_to\_control()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structicarus_1_1_control}{Control}} Control\+::eigen\+\_\+to\+\_\+control (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{vect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_structures_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{_structures_8cpp_source}{Structures.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structicarus_1_1_control_a42966eed76b68d20fcb2501be7675586}\label{structicarus_1_1_control_a42966eed76b68d20fcb2501be7675586} 
+\index{icarus::Control@{icarus::Control}!CONTROL\_LENGTH@{CONTROL\_LENGTH}}
+\index{CONTROL\_LENGTH@{CONTROL\_LENGTH}!icarus::Control@{icarus::Control}}
+\doxysubsubsection{\texorpdfstring{CONTROL\_LENGTH}{CONTROL\_LENGTH}}
+{\footnotesize\ttfamily constexpr size\+\_\+t icarus\+::\+Control\+::\+CONTROL\+\_\+\+LENGTH = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+Definition at line \mbox{\hyperlink{_structures_8hpp_source_l00042}{42}} of file \mbox{\hyperlink{_structures_8hpp_source}{Structures.\+hpp}}.
+
+\Hypertarget{structicarus_1_1_control_abc0bbf3259576ecf35ed7ef70941a43c}\label{structicarus_1_1_control_abc0bbf3259576ecf35ed7ef70941a43c} 
+\index{icarus::Control@{icarus::Control}!diff\_thrust@{diff\_thrust}}
+\index{diff\_thrust@{diff\_thrust}!icarus::Control@{icarus::Control}}
+\doxysubsubsection{\texorpdfstring{diff\_thrust}{diff\_thrust}}
+{\footnotesize\ttfamily double icarus\+::\+Control\+::diff\+\_\+thrust}
+
+
+
+Definition at line \mbox{\hyperlink{_structures_8hpp_source_l00040}{40}} of file \mbox{\hyperlink{_structures_8hpp_source}{Structures.\+hpp}}.
+
+\Hypertarget{structicarus_1_1_control_a21543a2963191984c5b9883ad48ede80}\label{structicarus_1_1_control_a21543a2963191984c5b9883ad48ede80} 
+\index{icarus::Control@{icarus::Control}!mean\_thrust@{mean\_thrust}}
+\index{mean\_thrust@{mean\_thrust}!icarus::Control@{icarus::Control}}
+\doxysubsubsection{\texorpdfstring{mean\_thrust}{mean\_thrust}}
+{\footnotesize\ttfamily double icarus\+::\+Control\+::mean\+\_\+thrust}
+
+
+
+Definition at line \mbox{\hyperlink{_structures_8hpp_source_l00039}{39}} of file \mbox{\hyperlink{_structures_8hpp_source}{Structures.\+hpp}}.
+
+\Hypertarget{structicarus_1_1_control_abbb6feee2d5084566b6d8667e100fa1d}\label{structicarus_1_1_control_abbb6feee2d5084566b6d8667e100fa1d} 
+\index{icarus::Control@{icarus::Control}!pitch@{pitch}}
+\index{pitch@{pitch}!icarus::Control@{icarus::Control}}
+\doxysubsubsection{\texorpdfstring{pitch}{pitch}}
+{\footnotesize\ttfamily double icarus\+::\+Control\+::pitch}
+
+
+
+Definition at line \mbox{\hyperlink{_structures_8hpp_source_l00038}{38}} of file \mbox{\hyperlink{_structures_8hpp_source}{Structures.\+hpp}}.
+
+\Hypertarget{structicarus_1_1_control_aa44b510916bab332584ef74fb3e7e72a}\label{structicarus_1_1_control_aa44b510916bab332584ef74fb3e7e72a} 
+\index{icarus::Control@{icarus::Control}!roll@{roll}}
+\index{roll@{roll}!icarus::Control@{icarus::Control}}
+\doxysubsubsection{\texorpdfstring{roll}{roll}}
+{\footnotesize\ttfamily double icarus\+::\+Control\+::roll}
+
+
+
+Definition at line \mbox{\hyperlink{_structures_8hpp_source_l00037}{37}} of file \mbox{\hyperlink{_structures_8hpp_source}{Structures.\+hpp}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+common/include/Structures.\+hpp\item 
+common/src/Structures.\+cpp\end{DoxyCompactItemize}

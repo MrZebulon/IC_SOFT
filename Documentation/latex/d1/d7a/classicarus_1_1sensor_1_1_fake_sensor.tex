@@ -1,0 +1,89 @@
+\doxysection{icarus\+::sensor\+::Fake\+Sensor\texorpdfstring{$<$}{<} n\+\_\+bias, n\+\_\+noise, n\+\_\+drift \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classicarus_1_1sensor_1_1_fake_sensor}{}\label{classicarus_1_1sensor_1_1_fake_sensor}\index{icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$@{icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$}}
+Inheritance diagram for icarus\+::sensor\+::Fake\+Sensor\texorpdfstring{$<$}{<} n\+\_\+bias, n\+\_\+noise, n\+\_\+drift \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d1/d7a/classicarus_1_1sensor_1_1_fake_sensor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{structicarus_1_1_sensor}{Sensor}}$<$ n\+\_\+bias, n\+\_\+noise, n\+\_\+drift $>$ \mbox{\hyperlink{classicarus_1_1sensor_1_1_fake_sensor_ab747c03dddf88c664fc3d8f1feb99ac8}{Sensor\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classicarus_1_1sensor_1_1_fake_sensor_a23c51adb84bd44f61daf1a43145054e9}{Fake\+Sensor}} (const double bias\mbox{[}n\+\_\+bias\mbox{]}, const double noise\mbox{[}n\+\_\+noise\mbox{]}, const double drift\mbox{[}n\+\_\+drift\mbox{]})
+\item 
+void \mbox{\hyperlink{classicarus_1_1sensor_1_1_fake_sensor_a13c63df2edf4f806b1bfdb90e31fdaa7}{generate\+\_\+sensor\+\_\+data}} (const double real\+\_\+values\mbox{[}n\+\_\+bias\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{structicarus_1_1_sensor}{icarus\+::\+Sensor$<$ n\+\_\+bias, n\+\_\+noise, n\+\_\+drift $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+Eigen\+::\+Matrix$<$ double, n\+\_\+bias, 1 $>$ \mbox{\hyperlink{structicarus_1_1_sensor_a6bce22d00491cb655b5ee7c867a1e6fc}{data}}
+\item 
+Eigen\+::\+Matrix$<$ double, n\+\_\+bias, 1 $>$ \mbox{\hyperlink{structicarus_1_1_sensor_ad1b2b5211d09d596df69bb57a1c20a90}{bias}}
+\item 
+Eigen\+::\+Matrix$<$ double, n\+\_\+noise, 1 $>$ \mbox{\hyperlink{structicarus_1_1_sensor_a31f2bd513be01218efcdfe69a7ca1536}{noise}}
+\item 
+Eigen\+::\+Matrix$<$ double, n\+\_\+drift, 1 $>$ \mbox{\hyperlink{structicarus_1_1_sensor_afbf6a7e9206d4860ef1431885851ee5f}{drift}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$size\+\_\+t n\+\_\+bias, size\+\_\+t n\+\_\+noise, size\+\_\+t n\+\_\+drift$>$\newline
+class icarus\+::sensor\+::\+Fake\+Sensor$<$ n\+\_\+bias, n\+\_\+noise, n\+\_\+drift $>$}
+
+
+Definition at line \mbox{\hyperlink{_fake_sensor_8hpp_source_l00018}{18}} of file \mbox{\hyperlink{_fake_sensor_8hpp_source}{Fake\+Sensor.\+hpp}}.
+
+
+
+\doxysubsection{Member Typedef Documentation}
+\Hypertarget{classicarus_1_1sensor_1_1_fake_sensor_ab747c03dddf88c664fc3d8f1feb99ac8}\label{classicarus_1_1sensor_1_1_fake_sensor_ab747c03dddf88c664fc3d8f1feb99ac8} 
+\index{icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$@{icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$}!SensorType@{SensorType}}
+\index{SensorType@{SensorType}!icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$@{icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$}}
+\doxysubsubsection{\texorpdfstring{SensorType}{SensorType}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+\_\+bias, size\+\_\+t n\+\_\+noise, size\+\_\+t n\+\_\+drift$>$ \\
+typedef \mbox{\hyperlink{structicarus_1_1_sensor}{Sensor}}$<$n\+\_\+bias, n\+\_\+noise, n\+\_\+drift$>$ \mbox{\hyperlink{classicarus_1_1sensor_1_1_fake_sensor}{icarus\+::sensor\+::\+Fake\+Sensor}}$<$ n\+\_\+bias, n\+\_\+noise, n\+\_\+drift $>$\+::\+Sensor\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_fake_sensor_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_fake_sensor_8hpp_source}{Fake\+Sensor.\+hpp}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classicarus_1_1sensor_1_1_fake_sensor_a23c51adb84bd44f61daf1a43145054e9}\label{classicarus_1_1sensor_1_1_fake_sensor_a23c51adb84bd44f61daf1a43145054e9} 
+\index{icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$@{icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$}!FakeSensor@{FakeSensor}}
+\index{FakeSensor@{FakeSensor}!icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$@{icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$}}
+\doxysubsubsection{\texorpdfstring{FakeSensor()}{FakeSensor()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+\_\+bias, size\+\_\+t n\+\_\+noise, size\+\_\+t n\+\_\+drift$>$ \\
+\mbox{\hyperlink{classicarus_1_1sensor_1_1_fake_sensor}{icarus\+::sensor\+::\+Fake\+Sensor}}$<$ n\+\_\+bias, n\+\_\+noise, n\+\_\+drift $>$\+::\+Fake\+Sensor (\begin{DoxyParamCaption}\item[{const double}]{bias\mbox{[}n\+\_\+bias\mbox{]},  }\item[{const double}]{noise\mbox{[}n\+\_\+noise\mbox{]},  }\item[{const double}]{drift\mbox{[}n\+\_\+drift\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{_fake_sensor_8hpp_source_l00022}{22}} of file \mbox{\hyperlink{_fake_sensor_8hpp_source}{Fake\+Sensor.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classicarus_1_1sensor_1_1_fake_sensor_a13c63df2edf4f806b1bfdb90e31fdaa7}\label{classicarus_1_1sensor_1_1_fake_sensor_a13c63df2edf4f806b1bfdb90e31fdaa7} 
+\index{icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$@{icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$}!generate\_sensor\_data@{generate\_sensor\_data}}
+\index{generate\_sensor\_data@{generate\_sensor\_data}!icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$@{icarus::sensor::FakeSensor$<$ n\_bias, n\_noise, n\_drift $>$}}
+\doxysubsubsection{\texorpdfstring{generate\_sensor\_data()}{generate\_sensor\_data()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t n\+\_\+bias, size\+\_\+t n\+\_\+noise, size\+\_\+t n\+\_\+drift$>$ \\
+void Fake\+Sensor\+::generate\+\_\+sensor\+\_\+data (\begin{DoxyParamCaption}\item[{const double}]{real\+\_\+values\mbox{[}n\+\_\+bias\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_fake_sensor_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{_fake_sensor_8cpp_source}{Fake\+Sensor.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Simulator/\+Sensor/include/Fake\+Sensor.\+hpp\item 
+Simulator/\+Sensor/src/Fake\+Sensor.\+cpp\end{DoxyCompactItemize}

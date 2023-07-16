@@ -1,0 +1,41 @@
+\doxysection{icarus\+::simulator\+::engine\+::Simulation\+Engine\+Interface Class Reference}
+\hypertarget{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_interface}{}\label{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_interface}\index{icarus::simulator::engine::SimulationEngineInterface@{icarus::simulator::engine::SimulationEngineInterface}}
+Inheritance diagram for icarus\+::simulator\+::engine\+::Simulation\+Engine\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d6/d61/classicarus_1_1simulator_1_1engine_1_1_simulation_engine_interface}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{structicarus_1_1_state}{State}} \mbox{\hyperlink{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_interface_a343ab42dbe83d5f022d86933ab362f0b}{single\+\_\+step}} (const \mbox{\hyperlink{structicarus_1_1_state}{State}} \&state, const \mbox{\hyperlink{structicarus_1_1_control}{Control}} \&control, const \mbox{\hyperlink{structicarus_1_1_environment}{Environment}} \&env, double dt)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_simulation_engine_interface_8hpp_source_l00020}{20}} of file \mbox{\hyperlink{_simulation_engine_interface_8hpp_source}{Simulation\+Engine\+Interface.\+hpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_interface_a343ab42dbe83d5f022d86933ab362f0b}\label{classicarus_1_1simulator_1_1engine_1_1_simulation_engine_interface_a343ab42dbe83d5f022d86933ab362f0b} 
+\index{icarus::simulator::engine::SimulationEngineInterface@{icarus::simulator::engine::SimulationEngineInterface}!single\_step@{single\_step}}
+\index{single\_step@{single\_step}!icarus::simulator::engine::SimulationEngineInterface@{icarus::simulator::engine::SimulationEngineInterface}}
+\doxysubsubsection{\texorpdfstring{single\_step()}{single\_step()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structicarus_1_1_state}{State}} icarus\+::simulator\+::engine\+::\+Simulation\+Engine\+Interface\+::single\+\_\+step (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structicarus_1_1_state}{State}} \&}]{state,  }\item[{const \mbox{\hyperlink{structicarus_1_1_control}{Control}} \&}]{control,  }\item[{const \mbox{\hyperlink{structicarus_1_1_environment}{Environment}} \&}]{env,  }\item[{double}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Computes the next state from current state, control \& env~\newline
+Integration is preformed here~\newline
+Computing state changes (\"{}x dot\"{}) is done by the plant~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_simulation_engine_interface_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{_simulation_engine_interface_8hpp_source}{Simulation\+Engine\+Interface.\+hpp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Simulator/\+Dynamic\+Simulation/include/engine/Simulation\+Engine\+Interface.\+hpp\end{DoxyCompactItemize}
