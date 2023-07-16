@@ -28,13 +28,13 @@ namespace icarus {
 	/**
 	 * Structure representing commands being sent to the drone
 	 *
-	 * - roll\n
+	 * - yaw\n
 	 * - pitch\n
 	 * - mean thrust\n
 	 * - differential thrust\n
 	 */
 	struct Control {
-		double roll;
+		double yaw;
 		double pitch;
 		double mean_thrust;
 		double diff_thrust;
