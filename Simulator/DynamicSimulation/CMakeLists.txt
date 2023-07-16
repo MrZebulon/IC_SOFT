@@ -8,8 +8,3 @@ add_library(ic_dynamic_model_simulator src/FlightSimulatorBase.cpp src/Simulatio
 target_include_directories(ic_dynamic_model_simulator PUBLIC include/)
 target_link_libraries(ic_dynamic_model_simulator INTERFACE Eigen3::Eigen)
 target_link_libraries(ic_dynamic_model_simulator PRIVATE ic_common)
-
-
-
-
-

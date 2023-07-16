@@ -15,26 +15,28 @@ namespace icarus {
 	 * - position in NED frame\n
 	 * - velocity in NED frame\n
 	 * - orientation (body -> NED)\n
+	 * - angular velocity in body frame\n
 	 */
 	struct State {
 		Eigen::Vector3d pos_ned;
 		Eigen::Vector3d vel_ned;
 		Eigen::Quaternion<double> q_nb;
+		Eigen::Quaternion<double> w_b;
 
 		static constexpr size_t STATE_LENGTH = 10;
 		static State eigen_to_state(const Eigen::VectorXd& vect);
 	};
 
 	/**
-	 * Structure representing commands being sent to the drone
+	 * Structure representing commands being sent to the drone\n
 	 *
-	 * - yaw\n
+	 * - roll\n
 	 * - pitch\n
 	 * - mean thrust\n
 	 * - differential thrust\n
 	 */
 	struct Control {
-		double yaw;
+		double roll;
 		double pitch;
 		double mean_thrust;
 		double diff_thrust;
@@ -45,16 +47,19 @@ namespace icarus {
 
 
 	/**
-	 * Structure representing the drone's target points
+	 * Structure representing the drone's target points\n
 	 *
 	 * - position in NED frame\n
 	 * - velocity in NED frame\n
 	 * - orientation (body -> NED)\n
+	 * - angular velocity in body frame\n
+
 	 */
 	struct Target {
 		Eigen::Vector3d pos_ned;
 		Eigen::Vector3d vel_ned;
 		Eigen::Quaterniond q_nb;
+		Eigen::Quaternion<double> w_b;
 	};
 
 	/**
@@ -79,13 +84,18 @@ namespace icarus {
 	 * - derivative of the position in NED frame\n
 	 * - derivative of the velocity in NED frame\n
 	 * - derivative of the orientation (body -> NED)\n
+	 * - derivative of the angular velocity in body frame\n
+	 * - airspeed\n
+	 * - angle_of_attack\n
 	 */
 	struct SimulationOutput {
 		Eigen::Vector3d d_pos_ned;
 		Eigen::Vector3d d_vel_ned;
 		Eigen::Quaterniond d_q_nb;
+		Eigen::Quaterniond d_w_b;
 
 		Eigen::Vector3d airspeed;
+		double angle_of_attack;
 	};
 
 	/**
