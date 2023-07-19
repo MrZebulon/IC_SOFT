@@ -13,7 +13,7 @@ void FlightSimulatorBase::init_simulator(std::string& params_path) {
 	 */
 	// Creating engine
 	const auto engine = std::make_unique<SimulationEngine<DynamicsModel>>();
-	engine->load_params_from_yml(params_path);
+	engine->plant->load_model_params(params_path);
 	_engine = engine;
 
 	// Setting up rates

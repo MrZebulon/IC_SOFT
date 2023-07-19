@@ -14,8 +14,14 @@ namespace icarus::simulator::engine {
 	class EnginePlant : public virtual DynamicsModel {
 
 	public:
-		SimulationOutput eval_dynamical_model_output(const State& state, const Control& control, const Environment& env) {
+		SimulationOutput eval_dynamical_model_output(const State &state, const Control &control,
+									const Environment &env) {
 			return DynamicsModel::template compute_dynamics(state, control, env);
+		}
+
+		void load_model_params(std::string &params_path) {
+			return DynamicsModel::template load_params_form_yml(params_path);
+
 		}
 	};
 }

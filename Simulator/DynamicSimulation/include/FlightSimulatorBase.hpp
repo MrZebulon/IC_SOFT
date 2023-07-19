@@ -63,12 +63,6 @@ namespace icarus::simulator {
 			 */
 			std::cout << "FlightSimulatorBase::get_targets" << " : " << "override me !" << std::endl;
 		}
-		virtual void get_state() {
-			/**
-			 * State ENDPOINT (subclass defined)
-			 */
-			std::cout << "FlightSimulatorBase::get_state" << " : " << "override me !" << std::endl;
-		}
 		virtual void get_control() {
 			/**
 			 * Control ENDPOINT (subclass defined)
